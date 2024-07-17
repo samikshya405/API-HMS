@@ -1,12 +1,24 @@
 # ======== Users section 
 ### post user 
-POST http://localhost:8000/api/v1/users/login
+POST http://localhost:8002/api/v1/employees
 Content-Type: application/json
 
 {
+    "fName":"sabin",
+    "mName":"hbf",
+    "lName":"dbfh",
+    "dob":"2024-05-22T09:36:19.000+00:00",
+    "gender":"female",
+    "phone":"47657456",
+    "email":"sabinsapkota7777@gmail.com",
     "department":"doctor",
-    "name":"sami",
-    "email":"hjkhkjkjgf@h.com",
-    "password":"123"
+    "jobTitle":"Dr",
+    "startDate":"2024-05-22T09:36:19.000+00:00",
+    "employmentType":"casual"
       
 }
+
+###get user
+GET http://localhost:8002/api/v1/department
+Content-Type: application/json
+

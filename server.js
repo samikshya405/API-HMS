@@ -1,27 +1,31 @@
-import express from 'express'
-import 'dotenv/config.js'
-import cors from 'cors'
-import { connectMongo } from './src/config/connectMongo.js'
-import userRouter from './src/router/userRouter.js'
+import express from "express";
+import "dotenv/config.js";
+import cors from "cors";
+import { connectMongo } from "./src/config/connectMongo.js";
+import userRouter from "./src/router/userRouter.js";
+import departmentRouter from "./src/router/departmentRouter.js";
+import employeeRouter from "./src/router/employeeRouter.js";
 
+const app = express();
 
-const app = express()
+app.use(cors());
 
-app.use(cors())
+connectMongo();
 
-connectMongo()
-
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8002;
 
 import morgan from "morgan";
+console.log(process.env.EMAIL_USER);
 
 if (process.env.NODE_ENV !== "production") {
-    app.use(morgan("dev"));
-  }
+  app.use(morgan("dev"));
+}
 
-app.use(express.json())
-app.use('/api/v1/users', userRouter )
+app.use(express.json());
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/department", departmentRouter);
+app.use("/api/v1/employees", employeeRouter);
 
-app.listen(PORT, (error)=>{
-    error ? console.log(error) : console.log("server is running in port", PORT)
-})
+app.listen(PORT, (error) => {
+  error ? console.log(error) : console.log("server is running in port", PORT);
+});
