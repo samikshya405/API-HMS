@@ -46,6 +46,10 @@ const EmployeeSchema = new mongoose.Schema(
       type: String,
       reqired: true,
     },
+    employeeId:{
+      type:String,
+      required:true
+    },
     isPasswordReset:{
         type:Boolean,
         required:true

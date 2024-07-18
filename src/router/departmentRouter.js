@@ -29,7 +29,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const department = await getDepartment();
-    console.log(department);
+   
     if (department) {
       res.json({
         status: "success",
