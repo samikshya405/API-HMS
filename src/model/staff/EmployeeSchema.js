@@ -22,7 +22,7 @@ const EmployeeSchema = new mongoose.Schema(
       required: true,
     },
     phone: {
-      type: Number,
+      type: String,
       required: true,
     },
     email: {
@@ -44,7 +44,7 @@ const EmployeeSchema = new mongoose.Schema(
     },
     employmentType: {
       type: String,
-      reqired: true,
+      required: true,
     },
     employeeId:{
       type:String,

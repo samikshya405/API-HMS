@@ -4,13 +4,13 @@ POST http://localhost:8002/api/v1/employees
 Content-Type: application/json
 
 {
-    "fName":"sabin",
-    "mName":"hbf",
-    "lName":"dbfh",
+    "fName":"Anil",
+    "mName":"tamang",
+    "lName":"tamang",
     "dob":"2024-05-22T09:36:19.000+00:00",
-    "gender":"female",
+    "gender":"male",
     "phone":"47657456",
-    "email":"sabinsapkota7777@gmail.com",
+    "email":"anil7777@gmail.com",
     "department":"doctor",
     "jobTitle":"Dr",
     "startDate":"2024-05-22T09:36:19.000+00:00",
@@ -20,6 +20,15 @@ Content-Type: application/json
 }
 
 ###get user
-GET http://localhost:8002/api/v1/department
+GET http://localhost:8002/api/v1/employees
 Content-Type: application/json
+
+### post user 
+POST http://localhost:8002/api/v1/users/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "123"
+}
 
