@@ -6,6 +6,8 @@ export const auth = async(req,res,next)=>{
     try {
         const {authorization} = req.headers;
         const decoded = verifyAccessJWT(authorization)
+        console.log(decoded);
+        
         if(decoded?.email){
             const tokenObj = await getToken(authorization)
             const user = await findEmail({email:decoded.email})
