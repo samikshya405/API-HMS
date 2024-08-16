@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export const connectMongo = () => {
-  const url = "mongodb://localhost:27017/hospital-database";
+  const url = process.env.MONGODB_URL;
 
   mongoose
     .connect(url)
