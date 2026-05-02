@@ -7,6 +7,7 @@ import departmentRouter from "./src/router/departmentRouter.js";
 import employeeRouter from "./src/router/employeeRouter.js";
 import rosterRouter from './src/router/rosterRouter.js'
 import appointmentRouter from './src/router/appointmentRouter.js'
+import patientRouter from "./src/router/patientRouter.js";
 const app = express();
 
 app.use(cors());
@@ -28,6 +29,7 @@ app.use("/api/v1/department", departmentRouter);
 app.use("/api/v1/employees", employeeRouter);
 app.use("/api/v1/rosters", rosterRouter);
 app.use("api/v1/appointments",appointmentRouter)
+app.use("/api/v1/patients", patientRouter);
 
 app.listen(PORT, (error) => {
   error ? console.log(error) : console.log("server is running in port", PORT);

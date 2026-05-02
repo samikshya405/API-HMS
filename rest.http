@@ -1,16 +1,16 @@
 # ======== Users section 
 ### post user 
-POST http://localhost:8002/api/v1/employees
+POST https://api-hms.onrender.com/api/v1/employees
 Content-Type: application/json
 
 {
-    "fName":"Anil",
-    "mName":"tamang",
-    "lName":"tamang",
+    "fName":"samikshya",
+    "mName":"ghg",
+    "lName":"kharel",
     "dob":"2024-05-22T09:36:19.000+00:00",
-    "gender":"male",
+    "gender":"female",
     "phone":"47657456",
-    "email":"anil7777@gmail.com",
+    "email":"suraj7777@gmail.com",
     "department":"doctor",
     "jobTitle":"Dr",
     "startDate":"2024-05-22T09:36:19.000+00:00",
